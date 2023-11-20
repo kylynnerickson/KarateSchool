@@ -1,0 +1,2 @@
+C:\Users\ekyly\OneDrive\Desktop\karate\WebApplication1\obj\Debug\Admin.csproj.AssemblyReference.cache
+C:\Users\ekyly\OneDrive\Desktop\karate\WebApplication1\obj\Debug\Admin.csproj.CoreCompileInputs.cache

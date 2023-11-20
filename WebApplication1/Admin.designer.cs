@@ -62,14 +62,6 @@ namespace WebApplication1
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<Instructor> Instructors
-		{
-			get
-			{
-				return this.GetTable<Instructor>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Member> Members
 		{
 			get
@@ -77,66 +69,12 @@ namespace WebApplication1
 				return this.GetTable<Member>();
 			}
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Instructors")]
-	public partial class Instructor : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Id;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    #endregion
-		
-		public Instructor()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int Id
+		public System.Data.Linq.Table<Instructor> Instructors
 		{
 			get
 			{
-				return this._Id;
-			}
-			set
-			{
-				if ((this._Id != value))
-				{
-					this.OnIdChanging(value);
-					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+				return this.GetTable<Instructor>();
 			}
 		}
 	}
@@ -149,12 +87,28 @@ namespace WebApplication1
 		
 		private int _Id;
 		
+		private string _FName;
+		
+		private string _LName;
+		
+		private System.Nullable<int> _Phone;
+		
+		private System.Nullable<System.DateTime> _Joined;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
     partial void OnIdChanging(int value);
     partial void OnIdChanged();
+    partial void OnFNameChanging(string value);
+    partial void OnFNameChanged();
+    partial void OnLNameChanging(string value);
+    partial void OnLNameChanged();
+    partial void OnPhoneChanging(System.Nullable<int> value);
+    partial void OnPhoneChanged();
+    partial void OnJoinedChanging(System.Nullable<System.DateTime> value);
+    partial void OnJoinedChanged();
     #endregion
 		
 		public Member()
@@ -162,7 +116,7 @@ namespace WebApplication1
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id
 		{
 			get
@@ -178,6 +132,86 @@ namespace WebApplication1
 					this._Id = value;
 					this.SendPropertyChanged("Id");
 					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FName", DbType="NChar(15)")]
+		public string FName
+		{
+			get
+			{
+				return this._FName;
+			}
+			set
+			{
+				if ((this._FName != value))
+				{
+					this.OnFNameChanging(value);
+					this.SendPropertyChanging();
+					this._FName = value;
+					this.SendPropertyChanged("FName");
+					this.OnFNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LName", DbType="NChar(15)")]
+		public string LName
+		{
+			get
+			{
+				return this._LName;
+			}
+			set
+			{
+				if ((this._LName != value))
+				{
+					this.OnLNameChanging(value);
+					this.SendPropertyChanging();
+					this._LName = value;
+					this.SendPropertyChanged("LName");
+					this.OnLNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="Int")]
+		public System.Nullable<int> Phone
+		{
+			get
+			{
+				return this._Phone;
+			}
+			set
+			{
+				if ((this._Phone != value))
+				{
+					this.OnPhoneChanging(value);
+					this.SendPropertyChanging();
+					this._Phone = value;
+					this.SendPropertyChanged("Phone");
+					this.OnPhoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Joined", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Joined
+		{
+			get
+			{
+				return this._Joined;
+			}
+			set
+			{
+				if ((this._Joined != value))
+				{
+					this.OnJoinedChanging(value);
+					this.SendPropertyChanging();
+					this._Joined = value;
+					this.SendPropertyChanged("Joined");
+					this.OnJoinedChanged();
 				}
 			}
 		}
@@ -199,6 +233,65 @@ namespace WebApplication1
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Instructors")]
+	public partial class Instructor
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _FName;
+		
+		private string _LName;
+		
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FName", DbType="NChar(15)")]
+		public string FName
+		{
+			get
+			{
+				return this._FName;
+			}
+			set
+			{
+				if ((this._FName != value))
+				{
+					this._FName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LName", DbType="NChar(15)")]
+		public string LName
+		{
+			get
+			{
+				return this._LName;
+			}
+			set
+			{
+				if ((this._LName != value))
+				{
+					this._LName = value;
+				}
 			}
 		}
 	}

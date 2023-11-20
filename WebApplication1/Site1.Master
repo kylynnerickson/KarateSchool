@@ -10,16 +10,17 @@
 </head>
 <body>
     <header>
-        <h1>Admin Page
-        
-        <asp:GridView runat="server" ViewStateMode="Disabled" DataSourceID="MembersGridView" ID="ctl04"></asp:GridView>
+        <h1>Admin Page  
         </h1>
     </header>
+     
     <form id="form1" runat="server">
         <div>
+             <asp:GridView runat="server" ID="ctl00"></asp:GridView>
+<input id="LastTxt" type="text" />
+            <asp:Button runat="server" Text="Search" OnClick="Unnamed2_Click"></asp:Button>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </form>
 </body>
-</html>
