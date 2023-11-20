@@ -10,7 +10,7 @@ namespace KarateSchool
     public partial class Member : System.Web.UI.Page
     {
         //Creates Connection to the Database
-        string connString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\w_m_j\\OneDrive\\Desktop\\Testing\\KarateSchool\\App_Data\\KarateSchool.mdf;Integrated Security=True;Connect Timeout=30";
+        string connString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\w_m_j\\OneDrive\\Documents\\GitHub\\KarateSchool\\kylynnerickson\\KarateSchool\\KarateSchool\\App_Data\\KarateSchool.mdf;Integrated Security=True;Connect Timeout=30";
         KarateSchoolDataContext dbcon;
 
         protected void Page_Load(object sender, EventArgs e)

@@ -10,7 +10,7 @@ namespace KarateSchool
     public partial class Instructor1 : System.Web.UI.Page
     {
         //Creates Connection to the Database
-        string connString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\w_m_j\\OneDrive\\Desktop\\Testing\\KarateSchool\\App_Data\\KarateSchool.mdf;Integrated Security=True;Connect Timeout=30";
+        string connString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\w_m_j\\OneDrive\\Documents\\GitHub\\KarateSchool\\kylynnerickson\\KarateSchool\\KarateSchool\\App_Data\\KarateSchool.mdf;Integrated Security=True;Connect Timeout=30";
         KarateSchoolDataContext dbcon;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -34,9 +34,7 @@ namespace KarateSchool
             //Sets the Label to the Last Name of the Logged In Instructor
             lbl_LastName.Text = lastName.ToString();
 
-            //Section Name      - Section table
-            //Member First Name - Member Table
-            //Member Last Name  - Member Table
+           
 
             var result = from x in dbcon.Sections
                          join i in dbcon.Members on x.Member_ID equals i.Member_UserID
