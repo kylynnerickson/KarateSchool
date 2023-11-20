@@ -50,7 +50,10 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+<<<<<<< HEAD
     <Reference Include="System.Data.Linq" />
+=======
+>>>>>>> ad4c839fa2b5374ac4470c244078c23cd5485c0b
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -104,10 +107,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+<<<<<<< HEAD
     <Content Include="App_Data\LoginData.mdf" />
     <Content Include="App_Data\LoginData_log.ldf">
       <DependentUpon>LoginData.mdf</DependentUpon>
     </Content>
+=======
+>>>>>>> ad4c839fa2b5374ac4470c244078c23cd5485c0b
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -129,8 +135,11 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+<<<<<<< HEAD
     <Content Include="Instructorlog\InstructorPageLog.aspx" />
     <Content Include="MemberLog\MemberPageLog.aspx" />
+=======
+>>>>>>> ad4c839fa2b5374ac4470c244078c23cd5485c0b
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -159,6 +168,7 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+<<<<<<< HEAD
     <Content Include="DataClasses1.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
@@ -169,6 +179,8 @@
     </None>
     <Content Include="MemberLog\Web.config" />
     <Content Include="Instructorlog\Web.config" />
+=======
+>>>>>>> ad4c839fa2b5374ac4470c244078c23cd5485c0b
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -219,11 +231,14 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="DataClasses1.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
+=======
+>>>>>>> ad4c839fa2b5374ac4470c244078c23cd5485c0b
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -234,6 +249,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Instructorlog\InstructorPageLog.aspx.cs">
       <DependentUpon>InstructorPageLog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -248,6 +264,8 @@
     <Compile Include="MemberLog\MemberPageLog.aspx.designer.cs">
       <DependentUpon>MemberPageLog.aspx</DependentUpon>
     </Compile>
+=======
+>>>>>>> ad4c839fa2b5374ac4470c244078c23cd5485c0b
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -258,20 +276,32 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+<<<<<<< HEAD
       <SubType>ASPXCodeBehind</SubType>
+=======
+>>>>>>> ad4c839fa2b5374ac4470c244078c23cd5485c0b
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+<<<<<<< HEAD
       <SubType>ASPXCodeBehind</SubType>
+=======
+>>>>>>> ad4c839fa2b5374ac4470c244078c23cd5485c0b
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup />
+=======
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+>>>>>>> ad4c839fa2b5374ac4470c244078c23cd5485c0b
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
@@ -283,9 +313,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
+=======
+>>>>>>> ad4c839fa2b5374ac4470c244078c23cd5485c0b
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
