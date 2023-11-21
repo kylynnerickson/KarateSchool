@@ -10,16 +10,44 @@
 </head>
 <body>
     <header>
-        <h1>Admin Page
-        
-        <asp:GridView runat="server" ViewStateMode="Disabled" DataSourceID="MembersGridView" ID="ctl04"></asp:GridView>
+        <h1>Admin Page  
         </h1>
     </header>
+     
     <form id="form1" runat="server">
         <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+             <asp:GridView runat="server" ID="ctl00">
+                 <Columns>  
+        <asp:BoundField DataField="Fname" HeaderText="First Name" />  
+        <asp:BoundField DataField="Lname" HeaderText="Last Name" />  
+        <asp:BoundField DataField="Phone" HeaderText="Phone" />  
+        <asp:CommandField ShowEditButton="true" />  
+        <asp:CommandField ShowDeleteButton="true" /> </Columns> 
+             </asp:GridView>
+            <div></div>
+            <asp:TextBox ID="LastTxt" runat="server"></asp:TextBox>
+            <asp:Button runat="server" Text="Search" OnClick="Unnamed2_Click"></asp:Button>
+                        <div></div>
+                        <div></div>
+
+
+
+
+
+
+            <asp:GridView runat="server" ID="GridView1">
+                <Columns>  
+                        <asp:BoundField DataField="Fname" HeaderText="First Name" />  
+                        <asp:BoundField DataField="Lname" HeaderText="Last Name" />  
+                 
+                        <asp:CommandField ShowEditButton="true" />  
+                        <asp:CommandField ShowDeleteButton="true" /> </Columns> 
+            </asp:GridView>
+
+                        <div></div>
+
+            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            <asp:Button ID="Button1" runat="server" Text="Search" />
         </div>
     </form>
 </body>
-</html>
