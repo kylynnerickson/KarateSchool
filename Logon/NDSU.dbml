@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LogonData" Class="NDSUDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.AspNetUsers" Member="AspNetUsers">
+    <Type Name="AspNetUser">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AspUsername" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="AspUserPassword" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="AspUserType" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="AspUserEmail" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
