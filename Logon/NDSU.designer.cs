@@ -33,6 +33,9 @@ namespace Logon
     partial void InsertAspNetUser(AspNetUser instance);
     partial void UpdateAspNetUser(AspNetUser instance);
     partial void DeleteAspNetUser(AspNetUser instance);
+    partial void Insert_AspNetUser_(_AspNetUser_ instance);
+    partial void Update_AspNetUser_(_AspNetUser_ instance);
+    partial void Delete_AspNetUser_(_AspNetUser_ instance);
     #endregion
 		
 		public NDSUDataContext(string connection) : 
@@ -64,6 +67,14 @@ namespace Logon
 			get
 			{
 				return this.GetTable<AspNetUser>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_AspNetUser_> _AspNetUser_s
+		{
+			get
+			{
+				return this.GetTable<_AspNetUser_>();
 			}
 		}
 	}
@@ -101,6 +112,164 @@ namespace Logon
     #endregion
 		
 		public AspNetUser()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AspUsername", DbType="NChar(20)")]
+		public string AspUsername
+		{
+			get
+			{
+				return this._AspUsername;
+			}
+			set
+			{
+				if ((this._AspUsername != value))
+				{
+					this.OnAspUsernameChanging(value);
+					this.SendPropertyChanging();
+					this._AspUsername = value;
+					this.SendPropertyChanged("AspUsername");
+					this.OnAspUsernameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AspUserPassword", DbType="NChar(10)")]
+		public string AspUserPassword
+		{
+			get
+			{
+				return this._AspUserPassword;
+			}
+			set
+			{
+				if ((this._AspUserPassword != value))
+				{
+					this.OnAspUserPasswordChanging(value);
+					this.SendPropertyChanging();
+					this._AspUserPassword = value;
+					this.SendPropertyChanged("AspUserPassword");
+					this.OnAspUserPasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AspUserType", DbType="NChar(10)")]
+		public string AspUserType
+		{
+			get
+			{
+				return this._AspUserType;
+			}
+			set
+			{
+				if ((this._AspUserType != value))
+				{
+					this.OnAspUserTypeChanging(value);
+					this.SendPropertyChanging();
+					this._AspUserType = value;
+					this.SendPropertyChanged("AspUserType");
+					this.OnAspUserTypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AspUserEmail", DbType="NChar(20)")]
+		public string AspUserEmail
+		{
+			get
+			{
+				return this._AspUserEmail;
+			}
+			set
+			{
+				if ((this._AspUserEmail != value))
+				{
+					this.OnAspUserEmailChanging(value);
+					this.SendPropertyChanging();
+					this._AspUserEmail = value;
+					this.SendPropertyChanged("AspUserEmail");
+					this.OnAspUserEmailChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.AspNetUsers")]
+	public partial class _AspNetUser_ : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _AspUsername;
+		
+		private string _AspUserPassword;
+		
+		private string _AspUserType;
+		
+		private string _AspUserEmail;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnAspUsernameChanging(string value);
+    partial void OnAspUsernameChanged();
+    partial void OnAspUserPasswordChanging(string value);
+    partial void OnAspUserPasswordChanged();
+    partial void OnAspUserTypeChanging(string value);
+    partial void OnAspUserTypeChanged();
+    partial void OnAspUserEmailChanging(string value);
+    partial void OnAspUserEmailChanged();
+    #endregion
+		
+		public _AspNetUser_()
 		{
 			OnCreated();
 		}
